@@ -1,0 +1,11 @@
+{
+  "languagesAndFrameworks": [
+    "Python", "JavaScript", "HTML", "React.js", "Node.js", "FastAPI", "Tailwind CSS", "SQL"
+  ],
+  "toolsAndPlatforms": [
+    "Git", "GitHub", "Docker", "MongoDB", "AWS", "Figma"
+  ],
+  "professionalCompetencies": [
+    "Problem Solving", "System Design", "Team Collaboration", "Communication"
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Cloud Practitioner",
+    "issuer": "Amazon Web Services",
+    "date": "2025",
+    "url": "https://example.com/credential"
+  },
+  {
+    "title": "Azure Fundamentals (AZ-900)",
+    "issuer": "Microsoft",
+    "date": "2024",
+    "url": null
+  }
+]

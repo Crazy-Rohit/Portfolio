@@ -1,0 +1,43 @@
+[
+  {
+    "id": "project-one",
+    "title": "Project One — A Short Tagline",
+    "period": "2025",
+    "featured": true,
+    "tech": ["React", "Node.js", "MongoDB"],
+    "description": "Two or three sentences on what the project does, who it's for, and what makes it interesting.",
+    "highlights": [
+      "A concrete feature or result",
+      "Another highlight worth calling out",
+      "Something technically challenging you solved"
+    ],
+    "githubUrl": "https://github.com/your-username/project-one",
+    "liveUrl": null,
+    "image": "/images/projects/placeholder.svg"
+  },
+  {
+    "id": "project-two",
+    "title": "Project Two — Freelance Client Site",
+    "period": "Freelance Project",
+    "featured": true,
+    "freelance": true,
+    "tech": ["Next.js", "Tailwind CSS"],
+    "description": "Set \"freelance\": true to show a Freelance badge. Featured projects appear in the carousel.",
+    "highlights": ["Delivered end-to-end for a client", "Responsive, accessible design"],
+    "githubUrl": null,
+    "liveUrl": "https://example.com",
+    "image": "/images/projects/placeholder.svg"
+  },
+  {
+    "id": "project-three",
+    "title": "Project Three",
+    "period": "2024",
+    "featured": false,
+    "tech": ["Python", "FastAPI"],
+    "description": "Projects with \"featured\": false show up as smaller cards under \"More Projects\".",
+    "highlights": ["Every project also gets its own detail page at /projects/<id>"],
+    "githubUrl": "https://github.com/your-username/project-three",
+    "liveUrl": null,
+    "image": null
+  }
+]

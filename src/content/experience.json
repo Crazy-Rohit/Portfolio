@@ -1,0 +1,37 @@
+[
+  {
+    "role": "Software Engineer",
+    "company": "Example Corp",
+    "logo": null,
+    "period": "2025 – Present",
+    "location": "Remote",
+    "current": true,
+    "bullets": [
+      "Describe an outcome, not a duty — e.g. \"Cut API latency by 40% by introducing a caching layer.\"",
+      "Mention the stack you used and the scale you worked at."
+    ]
+  },
+  {
+    "role": "Software Engineering Intern",
+    "company": "Example Corp",
+    "logo": null,
+    "period": "2024 – 2025",
+    "location": "Remote",
+    "current": false,
+    "bullets": [
+      "Consecutive roles at the same company are grouped into one card automatically — great for showing a promotion."
+    ]
+  },
+  {
+    "role": "Frontend Developer Intern",
+    "company": "Another Company",
+    "logo": null,
+    "period": "Jun 2023 – Aug 2023",
+    "location": "City, Country",
+    "current": false,
+    "bullets": [
+      "Built responsive interfaces with React and Tailwind CSS.",
+      "Set \"logo\" to an image path like \"/images/companies/another-company.png\" to show a logo instead of initials."
+    ]
+  }
+]

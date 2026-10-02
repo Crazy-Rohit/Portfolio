@@ -1,0 +1,77 @@
+{
+  "name": "Your Name",
+  "initials": "YN",
+  "greeting": "Hello, I'm",
+  "roleTitle": "Software Engineer · Designer · Lifelong Learner",
+  "heroDescription": "A short, punchy line about what you build and why it matters. Keep it to one or two sentences — this is the first thing visitors read.",
+  "avatar": "/images/profile-avatar.svg",
+  "resumeUrl": "/resume/resume.pdf",
+
+  "seo": {
+    "title": "Your Name — Software Engineer",
+    "description": "Portfolio of Your Name — software engineer, designer, and lifelong learner.",
+    "blogDescription": "Notes on engineering, design, and building products."
+  },
+
+  "availabilityBadge": "Open to New Opportunities",
+  "aboutEyebrow": "About Me",
+  "aboutHeading": "A one-line headline that sums up how you work.",
+  "aboutBio": [
+    "Introduce yourself here: where you studied or work, what you focus on, and the kind of problems you enjoy solving.",
+    "Use a second paragraph for highlights — a project you're proud of, research, awards, or what you do outside of work."
+  ],
+  "aboutFacts": [
+    { "label": "Education", "value": "Your University" },
+    { "label": "Currently", "value": "Role @ Company" },
+    { "label": "Focus", "value": "Your Specialty" },
+    { "label": "Based in", "value": "City, Country" }
+  ],
+  "aboutPullQuote": ["Learn", "Build", "Ship"],
+
+  "sections": {
+    "skills": {
+      "eyebrow": "Skills",
+      "title": "What I build with",
+      "subtitle": "The tools and technologies I use day to day."
+    },
+    "experience": {
+      "eyebrow": "Experience",
+      "title": "Where I've worked",
+      "subtitle": "Most recent first."
+    },
+    "volunteering": {
+      "eyebrow": "Beyond Code",
+      "title": "Volunteering & Leadership",
+      "subtitle": "Communities and roles outside of work."
+    },
+    "projects": {
+      "eyebrow": "My Work",
+      "title": "Projects",
+      "subtitle": "A selection of things I've built."
+    },
+    "publications": {
+      "eyebrow": "Research",
+      "title": "Publications",
+      "subtitle": "Papers, articles, and book chapters."
+    },
+    "achievements": {
+      "eyebrow": "Recognition",
+      "title": "Achievements",
+      "subtitle": "Awards, hackathons, and competitions."
+    },
+    "certifications": {
+      "eyebrow": "Credentials",
+      "title": "Certifications",
+      "subtitle": "Professional certifications and courses."
+    },
+    "contact": {
+      "eyebrow": "Get in Touch",
+      "title": "Let's build something",
+      "subtitle": "Have a project, a role, or just want to say hi? My inbox is open.",
+      "availability": "Available for work",
+      "blurb": ["Always up for interesting problems. Feel free to reach out directly, too."]
+    }
+  },
+
+  "footerNote": "Built with React, Tailwind & a little too much GSAP."
+}

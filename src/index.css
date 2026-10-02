@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* native cursor hidden in favor of CustomCursor.jsx, except over text
+   inputs where precise editing needs the real I-beam cursor back */
+.custom-cursor-active {
+  cursor: none;
+}
+.custom-cursor-active input,
+.custom-cursor-active textarea,
+.custom-cursor-active select,
+.custom-cursor-active [contenteditable='true'] {
+  cursor: auto;
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    opacity: 0.42;
+    transform: translate(14px, -10px) scale(1.08);
+  }
+  66% {
+    opacity: 0.36;
+    transform: translate(-10px, 8px) scale(1.12);
+  }
+}
+
+/* film grain — jumps between fixed offsets (steps(1)) instead of tweening,
+   so the GPU just re-positions one composited layer ~25 times a second
+   and never interpolates in between */
+@keyframes noise-shift {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -15%); }
+  40% { transform: translate(-5%, 15%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0); }
+  70% { transform: translate(0, 15%); }
+  80% { transform: translate(3%, -12%); }
+  90% { transform: translate(-10%, 10%); }
+  100% { transform: translate(0, 0); }
+}
+
+.animate-noise {
+  animation: noise-shift 0.4s infinite steps(1);
+  will-change: transform;
+}
+
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-noise {
+    animation: none;
+  }
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(
+    color-mix(in srgb, var(--accent-primary) 45%, transparent) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 20px 20px;
+}
+
+:root[data-theme='dark'] {
+  --bg-base: #0a0e1a;
+  --bg-elevated: #12172b;
+  --text-primary: #f1f3f9;
+  --text-muted: #9aa3b8;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --accent-primary: #4f7cff;
+  --accent-secondary: #8b5cf6;
+  --accent-glow: #6ee7f9;
+  --success: #34d399;
+  --card-shadow: 0 0 0 1px var(--border-subtle), 0 0 24px rgba(79, 124, 255, 0.08);
+  --gradient-mesh-opacity: 0.35;
+}
+
+:root[data-theme='light'] {
+  --bg-base: #f7f8fc;
+  --bg-elevated: #ffffff;
+  --text-primary: #101322;
+  --text-muted: #5b6478;
+  --border-subtle: rgba(16, 19, 34, 0.08);
+  --accent-primary: #3b63e0;
+  --accent-secondary: #7c3aed;
+  --accent-glow: #0ea5c4;
+  --success: #34d399;
+  --card-shadow: 0 0 0 1px var(--border-subtle), 0 8px 24px rgba(16, 19, 34, 0.1);
+  --gradient-mesh-opacity: 0.18;
+}
+
+* {
+  border-color: var(--border-subtle);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.section-container {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@screen sm {
+  .section-container {
+    padding-inline: 1.5rem;
+  }
+}
+
+@screen lg {
+  .section-container {
+    padding-inline: 2rem;
+  }
+}
+
+.prose-custom {
+  color: var(--text-primary);
+  line-height: 1.75;
+}
+.prose-custom h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  clear: both;
+}
+.prose-custom h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  clear: both;
+}
+.prose-custom p {
+  margin-bottom: 1.25rem;
+  color: var(--text-muted);
+}
+.prose-custom ul,
+.prose-custom ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  color: var(--text-muted);
+}
+.prose-custom ul {
+  list-style: disc;
+}
+.prose-custom ol {
+  list-style: decimal;
+}
+.prose-custom a {
+  color: var(--accent-primary);
+  text-decoration: underline;
+}
+.prose-custom code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875em;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 0.15rem 0.4rem;
+}
+.prose-custom pre {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+}
+.prose-custom pre code {
+  border: none;
+  background: none;
+  padding: 0;
+}
+.prose-custom blockquote {
+  border-left: 2px solid var(--accent-primary);
+  padding-left: 1rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}

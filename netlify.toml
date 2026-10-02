@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# React Router handles routing client-side, so every path must still resolve
+# to index.html on the server — without this, refreshing (or directly
+# opening) any route other than "/" 404s on Netlify.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

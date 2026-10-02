@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Placeholder project screenshot. Drop your own images in this folder and
+       reference them from "image" in src/content/projects.json. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4F7CFF" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)" />
+  <g fill="#ffffff" opacity="0.18">
+    <rect x="60" y="60" width="680" height="56" rx="12" />
+    <rect x="60" y="148" width="320" height="292" rx="16" />
+    <rect x="420" y="148" width="320" height="130" rx="16" />
+    <rect x="420" y="310" width="320" height="130" rx="16" />
+  </g>
+  <path d="M370 220 330 250l40 30M430 220l40 30-40 30" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+</svg>
