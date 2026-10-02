@@ -4,7 +4,7 @@
   "greeting": "Hello, I'm",
   "roleTitle": "Software Engineer · Designer · Lifelong Learner",
   "heroDescription": "A short, punchy line about what you build and why it matters. Keep it to one or two sentences — this is the first thing visitors read.",
-  "avatar": "/images/profile-avatar.svg",
+  "avatar": "/images/profile-avatar.png",
   "resumeUrl": "/resume/resume.pdf",
 
   "seo": {

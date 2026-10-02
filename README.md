@@ -73,7 +73,7 @@ Everything you need to change is in **`src/content/`** and **`public/`**.
 public/
 ├── favicon.svg               ← your icon
 ├── images/
-│   ├── profile-avatar.svg    ← replace with your photo
+│   ├── profile-avatar.png    ← replace with your photo
 │   ├── companies/            ← logos referenced from experience.json
 │   ├── projects/             ← screenshots referenced from projects.json
 │   └── blog/<post-slug>/     ← images used in a blog post

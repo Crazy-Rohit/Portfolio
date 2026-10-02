@@ -109,11 +109,20 @@ export default function Experience() {
         const nextFraction = fractionsRef.current[i + 1] ?? 1
         const segmentDuration = Math.max(nextFraction - fraction, 0.02)
 
-        tl.fromTo(
+        // Each card fades in on its own scroll range, keyed to where *it* is
+        // on screen, so it's fully visible by the time it nears the middle of
+        // the viewport. Tying it to the connector timeline above made a card
+        // wait for the *next* card to arrive, so it stayed faded until it had
+        // almost scrolled off the top.
+        gsap.fromTo(
           card,
           { opacity: 0, y: 28 },
-          { opacity: 1, y: 0, ease: 'none', duration: segmentDuration },
-          fraction,
+          {
+            opacity: 1,
+            y: 0,
+            ease: 'none',
+            scrollTrigger: { trigger: card, start: 'top 85%', end: 'top 60%', scrub: 0.5 },
+          },
         )
 
         const segment = segmentFillRefs.current[i]
